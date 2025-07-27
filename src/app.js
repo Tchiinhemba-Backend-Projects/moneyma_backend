@@ -1,6 +1,7 @@
 import { resolve } from 'path';
 import express from 'express';
 
+import authRoutes from './routes/authRoutes';
 import homeRoutes from './routes/homeRoutes';
 
 class App {
@@ -17,6 +18,7 @@ class App {
 
     routes() {
         this.app.use('/', homeRoutes);
+        this.app.use('/auth', authRoutes);
     }
 }
 
