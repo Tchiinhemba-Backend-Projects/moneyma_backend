@@ -2,6 +2,9 @@ class AuthController {
     async login(req, res) {
         const { userEmail, userPassword } = req.body;
 
+        console.log(userEmail);
+        console.log(userPassword);
+
         try {
             res.status(200).json({ message: "Successfull Login" })
         } catch (error) {
@@ -11,6 +14,9 @@ class AuthController {
 
     async register(req, res) {
         const { userEmail, userPassword } = req.body;
+
+        console.log(userEmail);
+        console.log(userPassword);
 
         try {
             res.status(200).json({ message: "Successfull registered" });
